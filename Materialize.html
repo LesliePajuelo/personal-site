@@ -9,12 +9,12 @@
   <title>Leslie Pajuelo</title>
 
   <!-- CSS  -->
-  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-  <link rel="stylesheet" href="css/leaflet.css" />
-  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link rel="stylesheet" type="text/css" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css"/>
+  <link rel="stylesheet" type="text/css" href="css/materialize.css" media="screen,projection"/>
+  <link rel="stylesheet" type="text/css" href="css/leaflet.css" />
+  <link rel="stylesheet" type="text/css"  href="css/style.css" media="screen,projection"/>
   <!--jQuery. Keep here or highcharts breaks-->
   <script type = "text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-
 </head>
 <body>
   <nav class="indigo darken-1" role="navigation">
@@ -22,13 +22,15 @@
       <ul class="right hide-on-med-and-down">
         <li><a href="#connect">Connect</a></li>
         <li><a href = "#webmap">Javascript visulizations</a></li>
-        <li><a href = "#gis">GIS Automation</a></li>
+        <li><a href = "#automation">Automation</a></li>
+        <li><a href = "#GIS">GIS</a></li>
       </ul>
  <!--TODO: Find a way to not have to repeat-->
       <ul id="nav-mobile" class="side-nav">
         <li><a href = "#connect">Connect</a></li>
         <li><a href = "#webmap">Javascript visulizations</a></li>
         <li><a href = "#automation">Automation</a></li>
+        <li><a href = "#GIS">GIS</a></li>
       </ul>
       <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
     </div>
@@ -41,6 +43,7 @@
       <div class="row center">
         <h5 class="header col s12 light"> Geographic Information Systems Specialist</h5>
         <h6 class = centered> &#8226;ArcGIS &#8226;Javascript &#8226;Python &#8226;MS Excel &#8226;MS Access </h6>
+
         <hr/>
       </div>
     <br><br>
@@ -49,7 +52,7 @@
 
 
   <div class="container">
-    <div class="section">
+    <div  id = "webmap" class="section">
 
 <!--   Projects Section   -->
       <h2 class="header center red-text">Projects</h2>
@@ -58,10 +61,10 @@
 <!--Red Cross map link-->
       <h5 class ="center blue-text">Javascript visulizations</h5>
 
-      <div id = "webmap" class="row">
+      <div class="row">
         <div class = "col l6 s12">
         <div class="card-panel">
-              <span><h4 class = "red-text"><a href="lesliepajuelo.com/RedCross.html" target ="blank">Red Cross Activity Map<h4>
+              <span><h4 class = "red-text"><a href="http://lesliepajuelo.com/RedCross.html" target ="blank">Red Cross Activity Map</h4>
               <p>The Kern County Red Cross office asked for map of their basic infrastructre an of where they respond to emergencies</p>
               <p>Click for demo</p></a><span>
             </div>
@@ -70,7 +73,7 @@
           <div class = "col l6 s12">
           <div class="card-panel">
 
-                <a href ="www.lesliepajuelo.com/RedCross.html" target ="blank"><img src = "images/RedCross.png" class = "responsive-img"/></a>
+                <a href ="http://lesliepajuelo.com/RedCross.html" target ="blank"><img src = "images/RedCross.png" class = "responsive-img"/></a>
 
           </div>
           </div>
@@ -80,7 +83,7 @@
     <div class="row">
       <div class = "col l6 s12">
       <div class="card-panel">
-            <span><h4 class = "red-text">Endangered Species Chloropleth<h4>
+            <span><h4 class = "red-text">Endangered Species Chloropleth</h4>
             <p>Created to show how many endangered species there are compared to human population. Or it could be called a responsibility density map.</p></a><span>
           </div>
         </div>
@@ -97,8 +100,9 @@
 <div class="row">
   <div class = "col l6 s12">
   <div class="card-panel">
-        <span><h4 class = "red-text">Clean water availability in the Zambezi Basin<h4>
-        <p>Access to clean water is essential for kids to prevent outbreaks which can stun growth.Click on the legend to toggle categories.</p></a><span>
+        <span><h4 class = "red-text">Clean water availability in the Zambezi Basin</h4>
+        <p>Access to clean water is essential for kids to prevent outbreaks which can stun
+          growth.Click on the legend to toggle categories.</p></a><span>
       </div>
     </div>
 
@@ -114,12 +118,75 @@
     </div>
 </div>
 
-<div class = "section">
+<div id= "automation" class = "section">
   <hr class = "dashed">
-    <h5 class = "center blue-text">Automation</h5>
+    <h5  class = "center blue-text">Automation</h5>
+<!--Python scraper-->
       <div class = "row">
+        <div class = "col l6 s12">
+        <div class="card-panel">
+              <span><a href="http://runnable.com/U-l0cF2Q8B8kiTn3/scrapping-webpages-with-python" target=blank><h4>Data Scraper in Python</h4></a>
+
+            <p>The original project was a SCADA which sent its output in a propietary format and to an internal webpage.</p>
+            <p>To avoid a direct link to the program database, I scrapped the output with python and exported it as a .csv which was then imported to a MySQL database. </p>
+            <p>Follow the link to a demo page which has a working example of the scraping of a wikipedia page.</p>
+                  </a><span>
+            </div>
+          </div>
+
+          <div class = "col l6 s12">
+            <div class="card-panel">
+
+              <a href="http://runnable.com/U-l0cF2Q8B8kiTn3/scrapping-webpages-with-python" target=blank><img src="images/runnableScrape.png" alt="image showing python code" class="responsive-img"></a>
+
+              </div>
+
+            </div>
+
       </div>
-</div>
+
+<!--ArcPy-->
+            <div class = "row">
+              <div class = "col l6 s12">
+              <div class="card-panel">
+                    <span><a href="https://gist.github.com/LesliePajuelo/89d89dacc24ee653e379" target=blank><h4>ArcGIS/ArcPy script</h4>
+            <p>A script to automate the data munging and standardization of field data.</p>
+            <p> The deliverables are updated data, elements in the maps, and PDF prints.</p>
+
+            <p><p><span>
+                  </div>
+                </div>
+
+                <div class = "col l6 s12">
+                  <div class="card-panel">
+
+                    <a href="https://gist.github.com/LesliePajuelo/89d89dacc24ee653e379" target = "blank"><img style = "height:350px;" src="images/update_monitoring.png" alt="image of code" class ="responsive-image"></a>
+
+                    </div>
+
+                  </div>
+
+            </div>
+<!--Model Builder-->
+                        <div class = "row">
+                          <div class = "col l6 s12">
+                          <div class="card-panel">
+                                <span><h4>Model Builder</h4>
+          <p>A portion of a UML in ESRI's Model Builder</p>
+          <p> In particular it was for prioritizing sections of a watershed</p><span>
+                              </div>
+                            </div>
+
+                            <div class = "col l6 s12">
+                              <div class="card-panel">
+
+                                <img style = "height:350px;" src="images/portfolio02.jpg" alt="image of code" class ="responsive-image"></a>
+
+                                </div>
+
+                              </div>
+
+                        </div>
 
 
     <br><br>
@@ -127,28 +194,55 @@
 
   </div>
 
+  <div id = "GIS" class = "section">
+    <hr class = "dashed">
+      <h5 class = "center blue-text">GIS</h5>
+  <!--Air Quality-->
+        <div class = "row">
+          <div class = "col l6 s12">
+          <div class="card-panel">
+                <span><h4 class = "red-text">Air Quality in the Bakersfield</h4>
+                  <p>This shows the concentration of small particulate matter.
+                    The data comes from the 1-hour sensor readings which tend to spike in the afternoons</p>
+                    <p>Using ArcGIS Spatial Analyst.</p>
+                    </a><span>
+              </div>
+            </div>
+
+            <div class = "col l6 s12">
+              <div class="card-panel">
+
+                <a href="#"><img src="images/SpatialAnalysis.png" alt="Image of map" class="responsive-img"></a>
+
+                </div>
+
+              </div>
+
+        </div>
+
+
+      <br><br>
+
+
+    </div>
+
 <!--About me/contact/footer-->
   <footer class="page-footer red">
     <div class="container">
       <div class="row">
+
         <div class="col l6 s12">
-          <h5 class="white-text">Bio</h5>
-          <p class="grey-text text-darken-4"></p>
-
-
-        </div>
-        <div class="col l3 s12">
-          <h5 id = "connect" class = white-text">Connect</h5>
+          <h5 id = "connect" class = white-text>Connect</h5>
 
           <div>
-            <ul>
-              <li class="social social-github"></li>
-              <li class="social social-gmail"></li>
-              <li class="social social-linkedin"></li>
-              <li class="social social-stackoverflow"></li>
-              <li class="social social-tumblr"></li>
-              <li class="social social-twitter"></li>
-            </ul>
+          <ul>
+            <li><a href="http://www.github.com/lesliepajuelo" target="blank"><i class="ico ion-social-github"></i></a></li>
+            <li><a href="mailto:leslielpajuelo@gmail.com" target="blank"><i class="ico ion-email"></i></a></li>
+            <li><a href="http://www.linkedin.com/in/lesliepajuelo" target="blank"><i class="ico ion-social-linkedin"></i></a></li>
+            <li><a href="https://www.twitter.com/lesliepajuelo" target="blank"><i class="ico ion-social-twitter"></i></a></li>
+          </ul>
+
+
 
 </div>
         </div>
