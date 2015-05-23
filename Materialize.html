@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+  <title>Leslie Pajuelo</title>
+
+  <!-- CSS  -->
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link rel="stylesheet" href="css/leaflet.css" />
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <!--jQuery. Keep here or highcharts breaks-->
+  <script type = "text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+</head>
+<body>
+  <nav class="indigo darken-1" role="navigation">
+    <div class="nav-wrapper container">
+      <ul class="right hide-on-med-and-down">
+        <li><a href="#connect">Connect</a></li>
+        <li><a href = "#webmap">Javascript visulizations</a></li>
+        <li><a href = "#gis">GIS Automation</a></li>
+      </ul>
+ <!--TODO: Find a way to not have to repeat-->
+      <ul id="nav-mobile" class="side-nav">
+        <li><a href = "#connect">Connect</a></li>
+        <li><a href = "#webmap">Javascript visulizations</a></li>
+        <li><a href = "#automation">Automation</a></li>
+      </ul>
+      <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+    </div>
+  </nav>
+  <div class="section no-pad-bot" id="index-banner">
+    <div class="container">
+      <br><br>
+<!--Header block. &#9702; Open bullet-->
+      <h1 class="header center red-text">Leslie Pajuelo</h1>
+      <div class="row center">
+        <h5 class="header col s12 light"> Geographic Information Systems Specialist</h5>
+        <h6 class = centered> &#8226;ArcGIS &#8226;Javascript &#8226;Python &#8226;MS Excel &#8226;MS Access </h6>
+        <hr/>
+      </div>
+    <br><br>
+    </div>
+  </div>
+
+
+  <div class="container">
+    <div class="section">
+
+<!--   Projects Section   -->
+      <h2 class="header center red-text">Projects</h2>
+      <hr class = "shadow"/>
+
+<!--Red Cross map link-->
+      <h5 class ="center blue-text">Javascript visulizations</h5>
+
+      <div id = "webmap" class="row">
+        <div class = "col l6 s12">
+        <div class="card-panel">
+              <span><h4 class = "red-text"><a href="lesliepajuelo.com/RedCross.html" target ="blank">Red Cross Activity Map<h4>
+              <p>The Kern County Red Cross office asked for map of their basic infrastructre an of where they respond to emergencies</p>
+              <p>Click for demo</p></a><span>
+            </div>
+          </div>
+
+          <div class = "col l6 s12">
+          <div class="card-panel">
+
+                <a href ="www.lesliepajuelo.com/RedCross.html" target ="blank"><img src = "images/RedCross.png" class = "responsive-img"/></a>
+
+          </div>
+          </div>
+    </div>
+
+<!--Chloropleth-->
+    <div class="row">
+      <div class = "col l6 s12">
+      <div class="card-panel">
+            <span><h4 class = "red-text">Endangered Species Chloropleth<h4>
+            <p>Created to show how many endangered species there are compared to human population. Or it could be called a responsibility density map.</p></a><span>
+          </div>
+        </div>
+
+        <div class = "col l6 s12">
+          <div class="card-panel">
+
+            <div id="map" style="width: 500px; height: 325px" onmouseover=map.invalidateSize(); onclick=map.invalidateSize()></div>
+
+          </div>
+        </div>
+  </div>
+<!--Zambia Chart-->
+<div class="row">
+  <div class = "col l6 s12">
+  <div class="card-panel">
+        <span><h4 class = "red-text">Clean water availability in the Zambezi Basin<h4>
+        <p>Access to clean water is essential for kids to prevent outbreaks which can stun growth.Click on the legend to toggle categories.</p></a><span>
+      </div>
+    </div>
+
+    <div class = "col l6 s12">
+      <div class="card-panel">
+
+        <script type = "text/javascript" src = "js/zambiaChart.js"></script>
+          <div id="zambiaChart" style="min-width: 500px; height: 350px; margin: 0 auto"></div>
+
+        </div>
+
+      </div>
+    </div>
+</div>
+
+<div class = "section">
+  <hr class = "dashed">
+    <h5 class = "center blue-text">Automation</h5>
+      <div class = "row">
+      </div>
+</div>
+
+
+    <br><br>
+
+
+  </div>
+
+<!--About me/contact/footer-->
+  <footer class="page-footer red">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">Bio</h5>
+          <p class="grey-text text-darken-4"></p>
+
+
+        </div>
+        <div class="col l3 s12">
+          <h5 id = "connect" class = white-text">Connect</h5>
+          <ul>
+            <li><a class="white-text" href="#!">Link 1</a></li>
+            <li><a class="white-text" href="#!">Link 2</a></li>
+            <li><a class="white-text" href="#!">Link 3</a></li>
+            <li><a class="white-text" href="#!">Link 4</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+      Made by Leslie Pajuelo with<a class="blue-text text-darken-3" href="http://materializecss.com"> Materialize</a>
+      </div>
+    </div>
+  </footer>
+
+
+<!--Scripts-->
+  <script src = "http://leafletjs.com/dist/leaflet.js"></script>
+  <script type = "text/javascript" src="js/states_endemic.js"></script>
+  <script type = "text/javascript" src ="js/endangeredMap.js"></script>
+  <script type = "text/javascript" src = "js/zambiaChart.js"></script>
+  <script type = "text/javascript" src="js/highcharts.js"></script>
+  <script type = "text/javascript" src = "js/exporting.js"></script>
+  <script type = "text/javascript" src = "js/materialize.js"></script>
+  <script type = "text/javascript" src = "js/init.js"></script>
+
+  </body>
+</html>

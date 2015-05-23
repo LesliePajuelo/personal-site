@@ -1,0 +1,628 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>Leslie Pajuelo: GIS Specialist</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,600,700" rel="stylesheet">
+    <script src="js/jquery-1.8.3.min.js"></script>
+    <script src="css/5grid/init.js?use=mobile,desktop,1000px"></script>
+    <script src="js/init.js"></script>
+    <noscript>
+    <link rel="stylesheet" href="css/5grid/core.css">
+    <link rel="stylesheet" href="css/5grid/core-desktop.css">
+    <link rel="stylesheet" href="css/5grid/core-1200px.css">
+    <link rel="stylesheet" href="css/5grid/core-noscript.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style-desktop.css">
+    </noscript>
+  <!--[if lte IE 9]>
+  <link rel="stylesheet" href="css/ie9.css">
+  <![endif]-->
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="css/ie8.css">
+  <![endif]-->
+  <!--[if lte IE 7]>
+  <link rel="stylesheet" href="css/ie7.css">
+  <![endif]-->
+
+    <style type="text/css">
+      .bs-example{
+        margin: 20px;
+      }
+    </style>
+
+<!--Endangered map styles-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="css/leaflet.css" />
+
+  <style>
+    #map {
+      width: 800px;
+      height: 500px;
+    }
+
+    .info {
+      padding: 6px 8px;
+      font: 14px/16px Arial, Helvetica, sans-serif;
+      background: white;
+      background: rgba(255,255,255,0.8);
+      box-shadow: 0 0 15px rgba(0,0,0,0.2);
+      border-radius: 5px;
+    }
+    .info h4 {
+      margin: 0 0 5px;
+      color: #777;
+    }
+
+    .legend {
+      text-align: left;
+      line-height: 18px;
+      color: #555;
+    }
+    .legend i {
+      width: 18px;
+      height: 18px;
+      float: left;
+      margin-right: 8px;
+      opacity: 0.7;
+    }
+  </style>
+
+  </head>
+<body>
+
+  <!-- top black nav
+<nav id="nav">
+  <ul>
+    <li><a href="index.html">Home</a></li>
+
+    <li><a href="index.html#portfolio">Portfolio</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+</div>
+-->
+
+<!--Header with round image-->
+
+<div class="wrapper wrapper-style1 wrapper-first">
+  <article class="5grid-layout" id="top">
+    <div class="row">
+      <div class="4u"> <h1>&nbsp;</h1><span class="me image image-full"><img src="images/me.jpg" alt=""></span> </div>
+      <div class="8u">
+        <header>
+          <h5><a href="mailto:LeslieLPajuelo@gmail.com?Subject=Hi%20I%20saw%your%site%and..." target="_top">
+L.L.Pajuelo@gmail.com</a>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(619) 928-4537</h5>
+          <h1>&nbsp;&nbsp;</h1>
+          <h1>I'm <strong>Leslie Pajuelo</strong>.</h1>
+        </header>
+        <p>And I'm an <strong>Environmental Scientist</strong> specialized in<strong> GIS.</strong> </p>
+<h2>&nbsp;</h2>
+        <a href="#work" class="button button-big">Portfolio</a> </div>
+    </div>
+  </article>
+</div>
+
+
+
+
+<!-- Style 3 has the blue back ground-->
+<div class="wrapper wrapper-style3">
+  <article id="portfolio">
+    <header>
+      <h2>Project types and snippets</h2>
+       </header>
+    <div class="5grid-layout">
+
+        <div class="12u"> </div>
+
+<!--DEFINE TABS-->
+<div class="bs-example">
+    <ul class="nav nav-tabs">
+
+        <li class="active"><a data-toggle="tab" href="#GIS" onmouseover=map.invalidateSize();>GIS</a></li>
+        <li><a data-toggle="tab" href="#Webmaps" onmouseover=map.invalidateSize();>Interactives</a></li>
+        <li><a data-toggle="tab" href="#Automation" onclick=map.invalidateSize();>Python/Automation</a></li>
+
+        <!--<li><a data-toggle="tab" href="#Graphics">Graphics for reports</a></li>-->
+       <!--Keep for later
+        <li class="dropdown">
+            <a data-toggle="dropdown" class="dropdown-toggle" href="#">Dropdown <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+                <li><a data-toggle="tab" href="#dropdown1">Dropdown1</a></li>
+                <li><a data-toggle="tab" href="#dropdown2">Dropdown2</a></li>
+            </ul>
+        </li>
+      -->
+    </ul>
+  </div>
+
+
+<!--TAB CONTENT-->
+<div class="tab-content">
+  <div id="Webmaps" class="tab-pane fade">
+
+  <h4 onmouseover=map.invalidateSize();>Made with Javascript, jQuery, Highcharts</h4>
+<!--ENDANGERED SPECIES MAP-->
+
+
+<div class="row">
+            <div class="7u">
+              <article class="box box-style2">
+              <div id="map" style="width: 650px; height: 400px" onmouseover=map.invalidateSize(); onclick=map.invalidateSize()></div>
+
+  <script src="http://leafletjs.com/dist/leaflet.js"></script>
+
+  <script type="text/javascript" src="js/states_endemic.js"></script>
+  <script type="text/javascript">
+
+    var map = L.map('map').setView([37.8, -96], 4);
+
+    L.tileLayer('https://{s}.tiles.mapbox.com/v3/{id}/{z}/{x}/{y}.png', {
+      maxZoom: 18,
+      attribution: 'Map data &copy;<a href="http://www.fws.gov/endangered/"> U.S. Fish & Wildlife Serivce </a>' +
+        'Imagery © <a href="http://mapbox.com">Mapbox</a>',
+      id: 'examples.map-20v6611k'
+
+    }).addTo(map);
+
+
+    // control that shows state info on hover
+    var info = L.control();
+
+    info.onAdd = function (map) {
+      this._div = L.DomUtil.create('div', 'info');
+      this.update();
+      return this._div;
+    };
+
+    info.update = function (props) {
+      this._div.innerHTML = '<h4>Endangered Species by population</h4>' +  (props ?
+        '<b>' + props.name + '</b><br />' + props.density + ' species per 1,000,000 people'
+        : 'Hover over a state');
+    };
+
+    info.addTo(map);
+
+
+    // get color depending on population density value
+    function getColor(d) {
+      return d > 30 ? '#3f007d' :
+             d > 25  ? '#54278f' :
+             d > 20 ? '#6a51a3' :
+             d > 15  ? '#9e9ac8' :
+             d > 10   ? '#807dba' :
+             d > 5   ? '#9e9ac8' :
+       d > 1   ? '#bcbddc' :
+                       '#fcfbfd';
+    }
+
+    function style(feature) {
+      return {
+        weight: 2,
+        opacity: 1,
+        color: 'white',
+        dashArray: '3',
+        fillOpacity: 0.7,
+        fillColor: getColor(feature.properties.density)
+      };
+    }
+
+    function highlightFeature(e) {
+      var layer = e.target;
+
+      layer.setStyle({
+        weight: 5,
+        color: '#666',
+        dashArray: '',
+        fillOpacity: 0.7
+      });
+
+      if (!L.Browser.ie && !L.Browser.opera) {
+        layer.bringToFront();
+      }
+
+      info.update(layer.feature.properties);
+    }
+
+    var geojson;
+
+    function resetHighlight(e) {
+      geojson.resetStyle(e.target);
+      info.update();
+    }
+
+    function zoomToFeature(e) {
+      map.fitBounds(e.target.getBounds());
+    }
+
+    function onEachFeature(feature, layer) {
+      layer.on({
+        mouseover: highlightFeature,
+        mouseout: resetHighlight,
+        click: zoomToFeature
+
+      });
+    }
+
+    geojson = L.geoJson(statesData, {
+      style: style,
+      onEachFeature: onEachFeature
+    }).addTo(map);
+
+
+    map.attributionControl.addAttribution('Population data &copy; <a href="http://census.gov/">US Census Bureau</a>');
+
+//legend
+
+    var legend = L.control({position: 'bottomright'});
+
+    legend.onAdd = function (map) {
+
+      var div = L.DomUtil.create('div', 'info legend'),
+        grades = [1,5, 10, 15, 20,35,30],
+        labels = [],
+        from, to;
+
+      for (var i = 0; i < grades.length; i++) {
+        from = grades[i];
+        to = grades[i + 1];
+
+        labels.push(
+          '<i style="background:' + getColor(from + 1) + '"></i> ' +
+          from + (to ? '&ndash;' + to : '+'));
+      }
+
+      div.innerHTML = labels.join('<br>');
+      return div;
+    };
+
+    legend.addTo(map);
+    </script>
+    <script type="text/javascript">
+
+    </script>
+    <script type="text/javascript">map.invalidateSize(true);</script>
+    </article>
+            </div>
+
+            <div class="5u">
+              <article class="boxArticle"> </a>
+                <h4>Interactive Choropleth</h4>
+                <p>Created using Leaflet, a Javascript library, and basemap data from Mapbox</p>
+                <p>Created as part of a series on evironmental justice and responsibility</p>
+                <p>It has a ratio of endangered native species to population per million.</p>
+              </article>
+            </div>
+        </div>
+
+<!--Highchart-->
+        <div class="row">
+          <div class="7u">
+          <article class="box box-style2">
+            <script type="text/javascript">
+$(function () {
+    $('#container').highcharts({
+        chart: {
+            type: 'column'
+        },
+        title: {
+            text: 'Sustainable Water per Country'
+        },
+        subtitle: {
+            text: 'In the Zambezi Basin'
+        },
+        xAxis: {
+            categories: [
+                'Angola',
+                'Botswana',
+                'Malawi',
+                'Mozambique',
+                'Namibia',
+                'Tanzania',
+                'Zambia',
+                'Zimbabwe'
+
+            ]
+        },
+        yAxis: {
+            min: 0,
+            title: {
+                text: 'Percent'
+            }
+        },
+        tooltip: {
+            headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+            pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+                '<td style="padding:0"><b>{point.y} %</b></td></tr>',
+            footerFormat: '</table>',
+            shared: true,
+            useHTML: true
+        },
+        plotOptions: {
+            column: {
+                pointPadding: 0.2,
+                borderWidth: 0
+            }
+        },
+        series: [{
+            name: 'Clean Drinking Water: Urban',
+            data: [34,100,95,81,100,90,88,100],
+            color: '#000080'
+
+        }, {
+            name: 'Clean Drinking Water: Rural',
+            data: [40,90,44,41,67,57,48,73],
+            color: '#67e6ec'
+
+        }, {
+            name: 'Access to Sanitation: Urban',
+            data: [70,88,96,68,96,99,99,71],
+            color: '#3b5323'
+
+        }, {
+            name: 'Access to Sanitation: Rural',
+            data: [30,43,70,26,17,86,64,57],
+            color:'#699864'
+
+        }]
+    });
+});
+    </script>
+  </head>
+  <body>
+<script src="js/highcharts.js"></script>
+<script src="js/modules/exporting.js"></script>
+
+<div id="container" style="min-width: 610px; height: 400px; margin: 0 auto"></div>
+
+
+           </article>
+          </div>
+
+          <div class="5u">
+          <article class="boxArticle"> </a>
+
+            <h3>Interactive bar chart</h3>
+            <p>Created using Highcharts a Javascript library<p>
+            <p>Concentrating on countries in the Zambezi basin, this chart shows the differnce in availability of fresh water and sanitation</p>
+            <p> Each legend item is a toggle for the chart.</p>
+          </article>
+          </div>
+      </div>
+
+
+
+
+
+
+
+
+
+<!-- CLOSES WEBMAPS-->
+</div>
+
+  <!--first tab-->
+        <div id="GIS" class="tab-pane fade in active">
+            <!--0th example-->
+            <h3>GIS</h3>
+            <div class="row">
+            <div class="7u">
+              <article class="box box-style2"> <a href="#" class="image image-center"><img src="images/SpatialAnalysis.png" alt=""></a>
+              </article>
+            </div>
+
+            <div class="5u">
+              <article class="boxArticle"> </a>
+                <h4>Spatial Analysis</h4>
+                <p>This map shows the concentration of small particulate matter.</p>
+                <p> The data comes from the 1-hour sensor readings which tend to spike in the afternoons</p>
+              </article>
+            </div>
+        </div>
+        <!-- 1st example-->
+        <div class="row">
+        <div class="7u">
+          <article class="box box-style2"> <a href="#" class="image image-center"><img src="images/Mapbooktemplate.jpg" alt=""></a>
+
+          </article>
+        </div>
+
+       <div class="5u">
+          <article class="boxArticle"> </a>
+
+    <h3>Mapbook Generation</h3>
+          <p>This document was generated from a custom mapbook template</p>
+    <p> I created the template to reduce time spent creating nearly identical maps</p>
+    <p> The images were in a file geodatabase and were geotagged with correct attributions to the locations of interest</p>
+          </article>
+        </div>
+      </div>
+      <!--3rd-->
+
+<div class="row">
+        <div class="7u">
+          <article class="box box-style2"> <a href="" class="image image-center"><img src="images/PreserveUIDsmall.jpg" alt=""></a>
+
+          </article>
+        </div>
+
+      <div class="5u">
+          <article class="boxArticle"> </a>
+
+    <h3>Land Ownership</h3>
+            <p>This was a large size E wall map.</p>
+      <p>It was created as a working map for purchasing of new land and specified which owners had contiguous tracts</p>
+      <p></p>
+          </article>
+        </div>
+      </div>
+<!--4-->
+       <div class="row">
+        <div class="7u">
+          <article class="box box-style2"> <a href="#" class="image image-center"><img src="images/waterswap.jpg" alt=""></a>
+
+          </article>
+        </div>
+
+       <div class="5u">
+          <article class="boxArticle"> </a>
+
+    <h3>Water Swap</h3>
+          <p>This is a typical example of a project for a board meeting.</p>
+    <p> In this case there was a water swap between land-owners.</p>
+          </article>
+        </div>
+      </div>
+<!--closes GIS tab-->
+      </div>
+
+<!--Python/Automation tab-->
+<div id="Automation" class="tab-pane fade">
+        <h3>Automating routine desktop and GIS tasks</h3>
+        <div class="row">
+          <div class="7u">
+          <article class="box box-style2"> <a href="http://runnable.com/U-l0cF2Q8B8kiTn3/scrapping-webpages-with-python" target=blank class="image image-center"><img src="images/runnableScrape.png" alt=""></a>
+           </article>
+          </div>
+
+          <div class="5u">
+          <article class="boxArticle"> </a>
+
+            <h3>Data Scrapper in Python</h3>
+
+            <p>The original project was a SCADA which sent its output in a propietary format and to an internal webpage.</p>
+            <p>To avoid a direct link to the program database, I scrapped the output with python and exported it as a .csv which was then imported to a MySQL database. </p>
+            <p>Follow the link to a demo page which has a working example of the scraping of a wikipedia page.</p>
+          </article>
+          </div>
+      </div>
+
+<!--2nd-->
+     <div class="row">
+        <div class="7u">
+          <article class="box box-style2"> <a href="https://gist.github.com/LesliePajuelo/89d89dacc24ee653e379" class="image image-center"><img src="images/update_monitoring.png" alt=""></a>
+
+          </article>
+        </div>
+
+
+       <div class="5u">
+          <article class="boxArticle"> </a>
+
+            <h3>ArcGIS script</h3>
+            <p>A script to automate the data munging and standardization of field data.</p>
+            <p> The deliverables are updated data, elements in the maps, and PDF prints.</p>
+
+            <p><p>
+          </article>
+        </div>
+        </div>
+
+
+      <div class="row">
+        <div class="7u">
+          <article class="box box-style2"> <a href="" class="image image-center"><img src="images/portfolio02.jpg" alt=""></a>
+
+          </article>
+        </div>
+
+
+       <div class="5u">
+          <article class="boxArticle"> </a>
+
+          <h3>Model Builder</h3>
+          <p>A portion of a UML in ESRI's Model Builder</p>
+          <p> In particular it was for prioritizing sections of a watershed</p>
+
+            <p><p>
+          </article>
+        </div>
+      </div>
+    </div>
+
+  <!--3rd-->
+
+
+
+
+
+
+
+<!--!CLOSES AUTOMATION tab-->
+        </div>
+
+
+<!--
+<div id="Graphics" class="tab-pane fade">
+
+        <div class="row">
+        <div class="7u">
+          <article class="box box-style2"> <a href="#" class="image image-center"><img src="images/watercycle.jpg" alt=""></a>
+
+          </article>
+        </div>
+      </div>
+
+       <div class="5u">
+          <article class="boxArticle"> </a>
+
+    <h3>Educational</h3>
+            <p>Also for a report but for the general public.</p>
+            <p> It shows the relationship between the top soil and an open shallow aquifer.</p>
+          </article>
+        </div>
+      </div>
+
+      <!--closes misc. tab
+      </div>
+-->
+
+
+
+
+<!-- Drop down tabs. Keep for later
+        <div id="dropdown1" class="tab-pane fade">
+            <h3>Dropdown 1</h3>
+            <p>WInteger convallis, nulla in sollicitudin placerat, ligula enim auctor lectus, in mollis diam dolor at lorem. Sed bibendum nibh sit amet dictum feugiat. Vivamus arcu sem, cursus a feugiat ut, iaculis at erat. Donec vehicula at ligula vitae venenatis. Sed nunc nulla, vehicula non porttitor in, pharetra et dolor. Fusce nec velit velit. Pellentesque consectetur eros.</p>
+        </div>
+        <div id="dropdown2" class="tab-pane fade">
+            <h3>Dropdown 2</h3>
+            <p>Donec vel placerat quam, ut euismod risus. Sed a mi suscipit, elementum sem a, hendrerit velit. Donec at erat magna. Sed dignissim orci nec eleifend egestas. Donec eget mi consequat massa vestibulum laoreet. Mauris et ultrices nulla, malesuada volutpat ante. Fusce ut orci lorem. Donec molestie libero in tempus imperdiet. Cum sociis natoque penatibus et magnis dis parturient.</p>
+        </div>
+    </div>
+</div>
+-->
+
+
+
+</footer>
+  </article>
+</div>
+
+
+
+    <footer>
+      <p id="copyright"> &copy; Leslie Pajuelo |(619) 928-4537 |L.L.Pajuelo@gmail.com<!--<a href="http://html5up.net/">Miniport template by HTML5up.net</a>-->
+    </footer>
+  </article>
+</div>
+</body>
+<!--google tracking-->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-53374396-1', 'auto');
+  ga('send', 'pageview');
+-->
+</script></html>

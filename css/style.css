@@ -1,0 +1,74 @@
+/* Custom Stylesheet */
+/**
+ * Use this file to override Materialize files so you can update
+ * the core Materialize files in the future
+ *
+ * Made By MaterializeCSS.com
+ */
+
+
+
+a {
+  text-style: underline;
+}
+
+h4 {
+  color: red;
+}
+
+hr.shadow {
+    height: 12px;
+    border: 0;
+    box-shadow: inset 0 12px 12px -12px rgba(0, 0, 0, 0.5);
+}
+
+hr.dashed {
+ border: 0;
+ height: 0;
+ border-top: 1px solid rgba(0, 0, 0, 0.1);
+ border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+p{
+  color: black;
+  size: 0.5em;
+}
+
+.icon-block {
+  padding: 0 15px;
+}
+
+#map {
+     width: 800px;
+     height: 500px;
+   }
+
+   .info {
+     padding: 6px 8px;
+     font: 14px/16px Arial, Helvetica, sans-serif;
+     background: white;
+     background: rgba(255,255,255,0.8);
+     box-shadow: 0 0 15px rgba(0,0,0,0.2);
+     border-radius: 5px;
+   }
+   .info h4 {
+     margin: 0 0 5px;
+     color: #777;
+   }
+
+   .legend {
+     text-align: left;
+     line-height: 18px;
+     color: #555;
+   }
+   .legend i {
+     width: 18px;
+     height: 18px;
+     float: left;
+     margin-right: 8px;
+     opacity: 0.7;
+   }
+
+nav{
+  position:fixed;
+}
