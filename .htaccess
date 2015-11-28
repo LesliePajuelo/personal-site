@@ -1,0 +1,5 @@
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} dc 2015-10-solo
+RewriteCond %{REQUEST_FILENAME}\.html -f
+RewriteRule ^(.*)$ .html
+# Replace html with your file extension, eg: php, htm, asp
