@@ -204,7 +204,7 @@ a:hover {
     padding: 5px;
     margin: 5px;
     width: 30%;
-    width: calc(30%);
+    width: calc(30%);*/
   }
 
   .biopic {
@@ -221,6 +221,11 @@ a:hover {
     width: 150px;
   }
 
+  .skillpic {
+    width: 10%;
+    height: 10%;
+  }
+
   .welcome-message {
     display: none;
   }
@@ -228,17 +233,13 @@ a:hover {
   p {
     padding: 3% 0;
   }
-
-  #mapDiv {
-    height: 350px;
-  };
 }
 
 @media only screen and (min-width: 750px) {
   #skills-h3,
   .biopic {
     display: block;
-  };
+  }
 }
 
 @media only screen and (max-width: 587px) {
@@ -266,7 +267,7 @@ a:hover {
     padding: 5px;
   }
 
-  #mapDiv {
-    overflow: auto;
-  };
+  .skillpic {
+    display: 5%;
+  }
 }

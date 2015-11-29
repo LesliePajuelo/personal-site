@@ -11,7 +11,7 @@ var HTMLlocation = '<li class="flex-item"><span class="info-text">Location</span
 var HTMLbioPic = '<img src="%data%" class="biopic">';
 
 var HTMLskillsStart = '<h3 id="skills-h3">Skills at a Glance:</h3><ul id="skills" class="flex-box"></ul>';
-var HTMLskills = '<img class="projpic" src="%data%">';
+var HTMLskills = '<img class="skillpic" src="%data%">';
 
 var HTMLprojectStart = '<div class="project-entry"></div>';
 var HTMLprojectTitle = '<a href="#" target="_blank">%data%</a>';
