@@ -57,21 +57,37 @@ bio.display = function() {
 var projectData = {
     "projects": [{
         "title": "Numeral Net <span class=subTitle>- numeral-net.herokuapp.com</span>",
+        "tag" : "Software Engineering",
         "url" : "https://numeral-net.herokuapp.com/",
         "tagline": "Javascript Neural network which recognizes handwritten digits. Built in plain\
         Javascript",
+        "date": "11/20/15",
         "description": "Machine learning is normally the realm of python, however, with advances to" +
         "the javascript compilers, namely V8, it's now possible to train forward feeding neural networks" +
-        "in javascript. ",
+        " in javascript. ",
         "images": ["images/NumeralNet.png"]
     }, {
         "title": "Envision <span class=subTitle>- envisionapp.herokuapp.com</span>",
+        "tag" : "Software Engineering",
         "url" : "https://envisionapp.herokuapp.com/",
-        "tagline": "11/15/2015",
-        "description": "Gives an affordability rating for software engineers who want to live close" +
-         "to home. Built with Angular.",
+        "date": "11/15/2015",
+        "tagline": "Gives an affordability rating for software engineers who want to live close" +
+         "to home.",
+        "description": " Built with Angular.",
         "images": ["images/envisionApp.png"]
-    }]
+    },
+    {
+        "title": "Activity Map <span class=subTitle>- lesliepajuelo.com/RedCross</span>",
+        "tag" : "GIS",
+        "url" : "http://lesliepajuelo.com/RedCross.html",
+        "date": "6/15/2015",
+        "tagline": "",
+        "description": "Demo map of the types of events the Red Cross might respong to. It displays" +
+                        "and filters points from a generated JSON. Clustering and declustering" + 
+                        " according to zoom level",
+        "images": ["images/RedCross.png"]
+    }
+    ]
 };
 
 projectData.display = function() {
