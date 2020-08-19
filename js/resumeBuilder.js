@@ -51,6 +51,51 @@ bio.display = function() {
     $("#topContacts,#footerContacts").append(formattedHTMLlinkedIn);
 };
 
+var recomendedReads = {
+    "books:[
+    {
+    "title":"Practical Object-Oriented Design in Ruby: An Agile Primer", 
+    "description":"Great not only for Ruby but a great way to think about OO design in all languages",
+    "link": "https://amzn.to/34gynvw"
+    },
+    {
+    "title":"Cracking the Coding interview", 
+    "description":"The bible of algorithmic interview prep",
+    "link": "https://amzn.to/3gal95F"
+    },
+    {
+    "title":"Cracking the Coding Interview: 189 Programming Questions and Solutions 6th Edition", 
+    "tagline":"The no-fluff just the questions version of cracking the coding interview",
+    "link": "https://amzn.to/3hpCIAl"
+    }
+]};
+
+recomendedReads.display = function() {
+    $("#recommended").append(HTMLrecomendedStart);
+    for (var book in recomendedReads.books) {
+        if (recomendedReads.books[book]) {
+            var formattedBookTitle = HTMLbookTitle.replace("#", recomendedReads.books[book].url)
+            .replace("%data%", recomendedReads.books[book].title);
+            $(".project-entry:last").append(formattedBookTitle);
+
+            var formattedbookTagline = HTMLbookTagline.replace("%data%", recomendedReads.books[book].tagline);
+            $(".project-entry:last").append(HTMLbookTagline);
+
+            var formattedBookDescription = HTMLbookDescription.replace("%data%", recomendedReads.books[book].link);
+            $(".project-entry:last").append(formattedBookDescription);
+
+            if (recomendedReads.books[book].images.length > 0) {
+                for (var image in projectData.projects[project].images) {
+                    if (projectData.projects[project]) {
+                        var formattedProjImg = HTMLprojectImage.replace("#", projectData.projects[project].url)
+                        .replace("%data%", projectData.projects[project].images[image]);
+                        $(".project-entry:last").append(formattedProjImg);
+                    }
+                }
+            }
+        }
+    }
+};
 
 
 //Projects
@@ -196,6 +241,7 @@ education.display = function() {
 };
 
 bio.display();
+projectData.display();
 projectData.display();
 education.display();
 
