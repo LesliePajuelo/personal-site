@@ -1,0 +1,273 @@
+body {
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+#main {
+  max-width: 1366px;
+  margin: 0 auto;
+}
+
+.clear-fix {
+  overflow: auto;
+}
+
+.work-entry,
+.project-entry {
+  color: #333333;
+  font-size: 1.25rem;
+  padding: 0 5%;
+}
+
+.education-entry {
+  color: #333333;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  padding: 0 5%;
+  margin-bottom: 20px;
+}
+
+h1 {
+  color: #f44336;
+  font: bold 3rem/3.5rem 'Montserrat', cursive;
+  display: inline-block;
+  margin: .5rem;
+}
+
+h2 {
+  font: bold 1.6rem/2rem 'Montserrat', sans-serif;
+  color: white;
+  padding: 0.625rem 5%;
+  background-color: #f44336;
+  text-align: center;
+  margin-top: 1px;
+}
+
+h3 {
+  font: bold 1.5rem/1.75rem 'Montserrat', cursive;
+  color: #f44336;
+  margin: 1rem 1rem 1rem 0;
+}
+
+h4 {
+  color: #f44336;
+  font-family: 'Montserrat', cursive;
+  font-size: 0.875rem;
+  line-height: 1.0625rem;
+  padding: 0.625rem 5%;
+}
+
+.role {
+  display: inline-block;
+}
+
+.date-text {
+  font: 1rem/1.5rem 'Montserrat', sans-serif;
+  color: #444444;
+  float: left;
+}
+
+.location-text {
+  font: .875rem/1rem 'Montserrat', sans-serif;
+  color: #444444;
+  float: right;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.25rem;
+}
+
+a {
+  color: inherit;
+  font-weight: bold;
+  text-decoration: none;
+  margin-top: 10px;
+  display: block;
+}
+
+.welcome-message {
+  font: bold 1.75rem/2rem 'Montserrat', cursive;
+  color: #f44336;
+  padding: 2rem 2rem 2rem 0;
+  display: block;
+}
+
+#skills-h3 {
+  font-family: 'Montserrat', sans-serif;
+  color: #333333;
+  text-align: center;
+  display: none;
+}
+
+.info-text {
+  color: #45769E;
+}
+
+.white-text {
+  font-weight: bold;
+  color: #fff;
+}
+
+.listContact {
+  display: inline-block;
+}
+
+#header {
+  background-color: #45769E;
+}
+
+.flex-box {
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: .75rem;
+}
+
+.flex-item:hover {
+  font-family: 'Montserrat', cursive;
+  font-size: 1.05rem;
+}
+
+.center-content {
+  padding: 2.5%;
+}
+
+ul {
+  list-style-type: none;
+  margin: 5px;
+}
+
+li {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+.biopic {
+  float: left;
+  margin: 1rem 2rem 1rem 0;
+  max-width: 50%;
+  display: none;
+  border-radius: 5%;
+  border: 5px solid white;
+}
+
+.projpic {
+  padding: 10px;
+  margin: 10px;
+}
+
+span {
+  padding: 10px;
+  display: inline-block;
+}
+
+.courseURl {
+  margin-top: 1px;
+  font-weight: normal;
+}
+
+#lets-connect {
+  text-align: center;
+  margin-top: 20px;
+  background-color: #45769E;
+}
+
+.subTitle {
+  color: #444444;
+  size: 0.5rem;
+}
+
+.tagline {
+  font-style: italic;
+  font-size: 1rem;
+}
+
+a:hover {
+  border-bottom: 1px dashed #45769E;
+}
+
+/* Media queries to handle various device widths */
+
+@media only screen and (min-width: 769px) and (max-width: 1170px) {
+  #lets-connect {
+    margin-top: 5%;
+  }
+
+  h1 {
+    margin: 5px;
+  }
+
+  .projpic {
+    padding: 5px;
+    margin: 5px;
+    width: 30%;
+    width: calc(30%);*/
+  }
+
+  .biopic {
+    margin: 1rem 2rem 2rem 0;
+  };
+}
+
+@media only screen and (max-width: 768px) {
+  #lets-connect {
+    margin-top: 10%;
+  }
+
+  .biopic {
+    width: 150px;
+  }
+
+  .skillpic {
+    width: 10%;
+    height: 10%;
+  }
+
+  .welcome-message {
+    display: none;
+  }
+
+  p {
+    padding: 3% 0;
+  }
+}
+
+@media only screen and (min-width: 750px) {
+  #skills-h3,
+  .biopic {
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 587px) {
+  #name,
+  .role,
+  .flex-item {
+    text-align: center !important;
+  }
+
+  #name,
+  .role {
+    display: block;
+  }
+
+  p {
+    padding: 5% 0;
+  }
+
+  .work-entry,
+  .project-entry {
+    padding: 7.5%;
+  }
+
+  .flex-item {
+    padding: 5px;
+  }
+
+  .skillpic {
+    display: 5%;
+  }
+}
